@@ -18,6 +18,13 @@ package UtilityPkg is
    -- Shorthand names for common types
    subtype sl is std_logic;
    subtype slv is std_logic_vector;
+   subtype size_t is integer ;
+   constant size_t_null : size_t := 0;
+   
+   subtype  integerM is integer;
+   subtype  integerS is integer;
+   subtype  DWORD is slv(31 downto 0);
+   
    -- Useful array types
    type Word8Array  is array (natural range <>) of slv( 7 downto 0);
    type Word9Array  is array (natural range <>) of slv( 8 downto 0);
@@ -25,7 +32,8 @@ package UtilityPkg is
    type Word13Array is array (natural range <>) of slv(12 downto 0);
    type Word16Array is array (natural range <>) of slv(15 downto 0);
    type Word32Array is array (natural range <>) of slv(31 downto 0);
-
+	
+	type t_integer_array       is array(integer range <> )  of integer;
    -----------------------
    -- Function prototypes
    -----------------------
